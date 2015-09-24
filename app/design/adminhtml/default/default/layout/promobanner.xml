@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <promobanner_adminhtml_promobanner_index>
+        <reference name="content">
+            <block type="promobanner/adminhtml_promobanner" name="promobanner" />
+        </reference>
+    </promobanner_adminhtml_promobanner_index>
+</layout>

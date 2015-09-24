@@ -1,0 +1,27 @@
+<?php
+    $collection = Mage::getModel('promobanner/promobanner')->getCollection()->setOrder('sortorder', 'ASC');
+    $cnt = 0;
+?>
+<style>
+    .std ul li{
+        list-style: none;
+    }
+    </style>
+<ul class="products-grid products-grid--max-6-col">
+    <?php
+                foreach($collection as $banner){
+                    $cnt++;
+                    ?>
+                    <li class="item <?php if($cnt == 1 or $cnt == 4 or $cnt == 7) echo "first"; elseif($cnt%3 == 0) echo "last";?>">
+
+                        <a class="product-image" href="<?php echo $banner->getUrl()?>" title="<?php echo $banner->getTitle();?>">
+                            <img src="<?php echo $this->helper('promobanner')->init($this->helper('promobanner')->getBrandPageImage($banner))->resize(260,260) ?>"
+                                 alt="<?php echo $banner->getTitle()?>"/>
+                        </a>
+                        <h3 class="product-name"><?php echo $banner->getTitle()?></h3>
+                    </li>
+            <?php
+
+                }
+?>
+</ul>
