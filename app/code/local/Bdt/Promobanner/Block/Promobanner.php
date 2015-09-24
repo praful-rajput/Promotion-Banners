@@ -1,4 +1,5 @@
 <?php
+
 class Bdt_Promobanner_Block_Promobanner extends Mage_Core_Block_Template
 {
 
@@ -6,17 +7,18 @@ class Bdt_Promobanner_Block_Promobanner extends Mage_Core_Block_Template
     {
         $this->setCacheLifetime(3600);
     }
+
     public function _prepareLayout()
     {
-		return parent::_prepareLayout();
+        return parent::_prepareLayout();
     }
-    
-     public function getStaticbanner()     
-     { 
+
+    public function getStaticbanner()
+    {
         if (!$this->hasData('promobanner')) {
             $this->setData('promobanner', Mage::registry('promobanner'));
         }
         return $this->getData('promobanner');
-        
+
     }
 }

@@ -7,7 +7,9 @@ class Bdt_Promobanner_Model_Mysql4_Promobanner_Collection extends Mage_Core_Mode
         parent::_construct();
         $this->_init('promobanner/promobanner');
     }
-    public function addStoreFilter($store, $withAdmin = true){
+
+    public function addStoreFilter($store, $withAdmin = true)
+    {
 
         if ($store instanceof Mage_Core_Model_Store) {
             $store = array($store->getId());

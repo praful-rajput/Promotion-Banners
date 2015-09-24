@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Created by praful.rajput on 9/24/2015.
+ * See COPYING.txt for license details.
+ */
+-->
+<config>
+    <menu>
+        <promobanner module="promobanner">
+            <title>Promotion Banner</title>
+            <sort_order>71</sort_order>
+            <children>
+                <items module="promobanner">
+                    <title>Manage Banners</title>
+                    <sort_order>10</sort_order>
+                    <action>promobanner/adminhtml_promobanner</action>
+                </items>
+            </children>
+        </promobanner>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <promobanner translate="title" module="promobanner">
+                        <title>Promotion Banner</title>
+                        <sort_order>10</sort_order>
+                        <children>
+                            <items module="promobanner">
+                                <title>Manage Banners</title>
+                                <sort_order>10</sort_order>
+                            </items>
+                        </children>
+                    </promobanner>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
